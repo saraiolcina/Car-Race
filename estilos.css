@@ -1,0 +1,253 @@
+html,
+body {
+  text-align: center;
+  background-color: rgb(249 246 246 / 0%);
+}
+
+h1 {
+  color: #f8f9fa;
+  padding: 40px;
+  background-color: #0c0c0c;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#container {
+  background-color: rgb(249 246 246 / 0%);
+  height: 100%;
+  height: calc(100% - -120px);
+  max-width: 100%;
+}
+
+form {
+  text-align: left;
+  background-color: #daef71;
+  width: 700px;
+  padding: 16px;
+  border-radius: 5px;
+  border: 2px solid;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+select {
+  font-size: 1.4em;
+  padding: 4px 6px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+form > p {
+  color: #0c0c0c;
+  font-size: 1.5em;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#numberOfPlayers {
+  color: black;
+  font-size: 1.5em;
+  display: none;
+  text-align: left;
+  background-color: lightgrey;
+  width: 700px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#start {
+  position: absolute;
+  text-align: center;
+  left: 67%;
+  top: 207px;
+}
+
+#restart {
+  position: absolute;
+  text-align: center;
+  left: 67%;
+  top: 207px;
+  display: none;
+}
+
+button {
+  color: #fff;
+  background-color: #080f17;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+    0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  padding: 6px 16px;
+  font-size: 1rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#resultsTable {
+  position: absolute;
+  text-align: 50%;
+  left: 28%;
+  top: 28%;
+  display: none;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#winner {
+  position: absolute;
+  text-align: 50%;
+  left: 4%;
+  top: 28%;
+  display: none;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#congratulations {
+  display: none;
+  background: #daef71;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgb(33 41 52 / 75%);
+  box-sizing: content-box;
+  height: 100px;
+  width: 680px;
+  overflow: hidden;
+  position: absolute;
+  padding: 2rem;
+  font-size: 3rem;
+  font-style: inherit;
+  left: 15%;
+  top: 50%;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/*Posicionamos los coches uno debajo del otro a la izquierda*/
+.car {
+  position: relative;
+  top: 100px;
+  float: left;
+  clear: left;
+  bottom: 3px;
+  padding: 20px;
+  margin-left: 0px;
+}
+
+/*Línea de meta*/
+#lineaMeta {
+  background-image: url(./img/bandera.png);
+  top: 350px;
+  width: 20px;
+  position: absolute;
+  left: 83%;
+  visibility: hidden;
+}
+
+#carRace {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*Diseño de la tabla y de todos sus elementos*/
+table {
+  table-layout: fixed;
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  border-collapse: collapse;
+  border: 3px solid #daef71;
+  text-align: center;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+footer {
+  position: fixed;
+  margin-top: 2px;
+  bottom: 0px;
+  width: 100%;
+  background-color: lightgrey;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/*Adaptamos el diseño para pantallas más pequeñas*/
+@media screen and (max-width: 1500px) {
+  html,
+  body {
+    width: 100%;
+  }
+  h1 {
+    width: 100%;
+  }
+  #container {
+    width: 100%;
+  }
+  .buttonWrapper {
+    width: 20%;
+  }
+  button {
+    max-width: 32%;
+    font-size: 0.8em;
+  }
+  table {
+    width: 50%;
+    left: 10%;
+    top: 48%;
+  }
+  #resultsTable {
+    max-width: 32%;
+    max-width: fit-content;
+    top: 38%;
+  }
+  #winner {
+    max-width: 32%;
+    max-width: fit-content;
+    top: 38%;
+  }
+  #congratulations {
+    width: 50%;
+  }
+  .car {
+    position: relative;
+    top: 70px;
+    float: left;
+    clear: left;
+    bottom: 3px;
+    padding: 5px;
+  }
+}

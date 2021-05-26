@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="funciones.js"></script>
+    <link href="estilos.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>PAC DESARROLLO DISEÑO INTERFACES</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenidos a la carrera!</h1>
+    </header>
+
+    <div id="container">
+      <!--Formulario-->
+      <form id="formulary" action="" method="">
+        <p>Elige el número de participantes en la carrera</p>
+        <select id="options">
+          <option value="1">1 participante</option>
+          <option value="2">2 participantes</option>
+          <option value="3">3 participantes</option>
+          <option value="4">4 participantes</option>
+          <option value="5">5 participantes</option>
+          <option value="6">6 participantes</option>
+          <option value="7">7 participantes</option>
+          <option value="8">8 participantes</option>
+          <option value="9">9 participantes</option>
+        </select>
+      </form>
+
+      <!--div que devuelve el número de participantes seleccionado por el usuario-->
+      <div id="numberOfPlayers"></div>
+
+      <!--Contenedor del área de la carrera, aquí se crean los coches y la línea de meta-->
+      <div id="carRace">
+        <div id="carsContainer"></div>
+        <div id="lineaMeta"></div>
+      </div>
+
+      <!--Contenedor de botones-->
+      <div class="buttonWrapper">
+        <button id="start">Iniciar</button>
+        <button id="restart">Reiniciar</button>
+        <button id="winner">Ver coche ganador</button>
+        <button id="resultsTable">Ver tabla de resultados</button>
+      </div>
+
+      <!--div que devuelve el coche ganador-->
+      <div id="congratulations"></div>
+    </div>
+
+    <!--Pie de página-->
+    <footer>
+      <h4><b>Sarai Olcina</b></h4>
+      <h5>Diseño de Interfaces Web</h5>
+    </footer>
+  </body>
+</html>
